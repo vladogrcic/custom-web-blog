@@ -1,4 +1,4 @@
-# Custom Blog Ins
+# Custom Web Blog
 Custom Laravel blog built with Laravel, Vue and Bulma.
 
 ## Installation instructions:
