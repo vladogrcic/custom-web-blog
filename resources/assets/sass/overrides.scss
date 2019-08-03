@@ -1,0 +1,257 @@
+/* ========================================
+============ Text Overrides ===========
+======================================== */
+
+.is-muted {
+    color: $grey-light !important;
+}
+
+a.is-muted:hover{
+    color: $grey !important;
+}
+
+.nav-item img {
+    max-height: 2.8rem;
+}
+
+.nav {
+    height: 4.5rem;
+    width: 100%;
+}
+.navbar-brand{
+    width: 25%;
+}
+.navbar-brand .brand-item {
+    margin-right: 5px;
+    margin-left: 10px;
+    @include desktop {
+        margin-right: 15px;
+    }
+}
+.media-manager > .column {
+    min-height: 335px;
+    // padding-bottom: 6px;
+    // padding-top: 6px;
+    min-width: 220px;
+    .card{
+        min-height: 335px;
+        box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.35);
+
+    }
+    &.is-3.file *{
+        overflow: visible;
+    }
+}
+.media-manager .card .card-content{
+    padding: 10px;
+    span{
+    }
+    .media{
+        margin-bottom: 0;
+        .media-content{
+            .media-sub-content{
+                height: 28px; display: inline-block; width:100%;
+                div:first-child{
+                    height: 28px; display: inline-block; width:55%; float: left;
+                }
+                div:last-child{
+                    height: 28px; display: inline-block; width:45%; float: left;
+                }
+
+            }
+            >.filename{
+                display: inline-block;
+                min-height: 28px;
+                width:100%;
+                >div:first-child{
+                    overflow: visible; 
+                    // height:28px;
+                    display: inline-block;
+                    width: 100%;
+                    // span i, span i:before{
+                    //     min-width: 100%;
+                    //     min-height: 100%;
+                        
+                    // }
+                }
+                // >div:first-child .icon.title.is-7{
+                //     // height:28px; 
+                //     margin-bottom: 0;
+                // }
+                >div:last-child{
+                    display:block; 
+                    // height:32px;
+                    // overflow: hidden; 
+                    padding-top: -5px;
+                    margin: 0;
+                    // >span:first-child{
+                    //     display: block; width:10%;float:left;margin-bottom: 0;
+                    //     i{
+                    //         display: block;
+                    //     }
+                    // }
+                    // >span:last-child{
+                    //     display: block; width:90%;float:right; margin-left: 10%; height:25px;
+                    // }
+                }
+            }
+
+        }
+        .icon:not(.icon-round){
+            width: 20px;
+            margin-bottom: 5px;
+            >i:before{
+                max-width: 20px;
+                font-size: 15px;
+            }
+        }
+        
+    }
+
+}
+.media-manager .card-image{
+    // min-height: 150px;
+    // max-height: 150px;
+    overflow: hidden;
+    background-color: #D4D4D4;
+    .icon-round{
+            // width: 20px;
+            // margin-bottom: 5px;
+            font-size: 25px;
+            border-radius: 100%;
+            background-color: rgba(160, 160, 160, 1);
+            
+            display: none;
+            width: 45px; height: 45px; 
+            position: absolute; 
+            z-index: 99999; 
+            top: 15px; 
+            left: 15px;
+            span{
+                // width: 20px;
+                // margin-bottom: 5px;
+                font-size: 25px;
+                border-radius: 100%;
+                background-color: rgba(160, 160, 160, 1);
+                width: 100%;
+                height: 100%;
+                // display: none;
+            }
+            >i{
+                font-size: 25px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+        }
+        .image div:hover{
+            cursor: pointer;
+        }
+        .image div:hover ~ span.icon-round{
+            display: block;
+        }
+    span.icon-round:hover{
+        display: block;
+        z-index: 9999999; 
+        cursor: pointer;
+    }
+    
+}
+.media-manager .folder {
+    .card{
+        background-color: #E9F5FF;
+        .card-image{
+            // min-height: 288px;
+            div{
+                // @media only screen and (max-width: 1280px) {
+                    & {
+                        min-height: 188px; 
+                    }
+                // }
+                @media only screen and (min-width: 1900px) {
+                    & {
+                        min-height: 280px;
+                    }
+                }
+                @media only screen and (min-width: 2500px) {
+                    & {
+                        min-height: 380px;
+                    }
+                }
+            }
+            
+            // padding: 15px 35px;
+            background-color: #ADDAFF;
+            border-bottom: #E2E2E2 1px solid;
+            cursor: pointer;
+            .image{
+                // height: 185px;
+                
+                div{
+                    // height: 185px;
+                    background-size: 65%;
+                    background-repeat: no-repeat; 
+                    background-position: center; 
+                    
+                }
+            }
+            img{
+                margin:0;
+                // min-width: 125px;
+                // max-width: 125px;
+            }
+            .card-content{
+                font-size: 15px;
+            }
+        }
+    }
+}
+.media-manager-wrapper {
+    > .notification{
+        padding: 0;
+        background-color: transparent;
+    }
+    .media-manager .column{
+        padding: 8px;
+    }
+}
+// @media only screen and (min-width: 600px) {
+    .modal-content, .modal-card{
+        margin: 0 20px;
+        max-height: calc(100vh - 160px);
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+    }
+// }
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.navbar.has-shadow {
+    box-shadow: 0 2px 10px rgb(158, 158, 158);
+}
+.navbar-burger {
+    border: none;
+}
+.tab-content{
+    // overflow: visible !important;
+}
+.dropdown-menu, .dropdown-menu *{
+    max-height: 320px;
+}
+.selected-author{
+    margin-top: 5px;
+    >img{
+        max-height: 50px!important;
+        max-width: 50px!important;
+    }
+}
+.pagination-list > li{
+    cursor: pointer;
+}
+.select, .select select{
+    width: 100%;
+}

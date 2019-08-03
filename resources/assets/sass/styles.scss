@@ -1,0 +1,135 @@
+body{
+    background-color: #EEEEEE;
+    max-width: 100%;
+}
+.is-darker-smoke.tag{
+    background-color: #E8E8E8;
+    border: solid 1px silver;
+    :hover{
+        background-color: #959595!important;
+    }
+    i{
+        color: #4E4E4E;
+    }
+
+    // background-color: gainsboro!important;
+    // color: #E2E2E2!important;
+}
+.is-light-blue.tag{
+    background-color: #4d94ff;color: #FFFFFF;
+    &*:before{
+        color: #FFFFFF;
+    }
+}
+.tag.is-delete.is-danger.delete-hover:hover{
+    background-color: #CD0303;
+}
+.right-sidebar{
+    max-width: 35%;
+}
+.main-blog.section{
+    padding: 15px;
+}
+.main-body{
+    padding: 50px;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.navbar.has-shadow {
+    box-shadow: 0 5px 25px rgb(158, 158, 158);
+}
+
+.navbar-burger {
+    border: none;
+}
+.blog-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 250px;
+    padding-bottom: 50%;
+    margin-bottom: 15px;
+}
+.user-avatar, .icon.is-medium.user-avatar{
+    margin-bottom: -16px;
+    margin-right: 8px;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+}
+.icon.is-medium.user-avatar{
+    margin-bottom: -18px;
+    margin-right: 8px;
+}
+.icon.is-medium.user-avatar i:before{
+    font-size: 50px;
+}
+
+h6{
+    font-size: 14px;
+}
+h5{
+    font-size: 16px;
+}
+h4{
+    font-size: 18px;
+}
+h3{
+    font-size: 20px;
+}
+h2{
+    font-size: 22px;
+}
+h1{
+    font-size: 24px;
+}
+.pagination{
+    li.page-item{ 
+        display:inline-block;
+        font-weight: 700;
+        font-size: 20px;
+        min-width: 50px;
+        min-height: 25px;
+        padding:10px 5px;
+        &.active{
+            span{
+                background-color: rgb(214, 214, 214);
+                border: rgb(163, 163, 163) solid 1px;
+            }
+        }
+        *{
+            padding:16px 16px;
+        }
+        a{
+            background-color: rgb(245, 245, 245);
+            border: #afafaf solid 1px;
+            -webkit-transition: background-color 0.5s, color 0.5s;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        a:hover{
+            background-color: rgb(52, 122, 212);
+            border: #afd2ff solid 1px;
+            color: rgb(236, 236, 236);
+        }
+        span{
+            background-color: #EEEEEE;
+            border: rgb(212, 212, 212) solid 1px;
+        }
+        
+    }
+}
+figure.image{
+    margin: 25px;
+    >figcaption{
+        padding: 15px;
+        text-align: center;
+        font-size: small;
+        color: grey;
+        font-style: italic;
+        background-color: rgb(245, 245, 245);
+        border: rgb(218, 218, 218) solid 1px;
+    }
+}

@@ -1,0 +1,63 @@
+.js-cookie-consent.cookie-consent{
+    background-color: rgb(241, 214, 163);
+    color: rgb(138, 90, 0);
+    width: 100%;
+    bottom: 0;
+    padding: 25px;
+    position: fixed!important;
+    z-index: 99999;
+}
+.js-cookie-consent.cookie-consent button{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.js-cookie-consent.cookie-consent button{
+    background-color: rgb(255, 175, 25);
+    color: rgb(182, 118, 0);
+    padding: 15px;
+    font-weight: 900;
+    float: right;
+}
+.navbar-menu{
+    float: right;
+}
+.navbar > div{
+    width: 100%;
+}
+// .navbar > div > div{
+//     width: 50%;
+// }
+.navbar > div > div:first-child{
+    float: left;
+}
+// .navbar > div > div:last-child{
+//     float: right;
+// }
+.main-languages{
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.navbar-brand{
+    width: 20%;
+}
+.navbar-menu{
+    /*width: 65%;*/
+    .navbar-start{
+        float: right;
+        margin-right: 0;
+    }
+}
