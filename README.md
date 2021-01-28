@@ -16,6 +16,8 @@ Custom Laravel blog built with Laravel, Vue and Bulma.
 
 2. Pull Laravel/php project from GitHub.
 
+     ``git clone https://github.com/vladogrcic/custom-web-blog.git``
+
 3. Open the console and cd your project root directory
 
      ``composer install``
