@@ -28,7 +28,7 @@ class LanguageController extends Controller
      */
     public function index(IndexRequest $request)
     {
-        $access = Auth::user()->can('read-general');
+        $access = Auth::user()->isAbleTo('read-general');
         if (!$access) {
             abort(403);
         }
@@ -80,7 +80,7 @@ class LanguageController extends Controller
      */
     public function store(UpdateRequest $request)
     {
-        $access = Auth::user()->can('create-general');
+        $access = Auth::user()->isAbleTo('create-general');
         if (!$access) {
             abort(403);
         }
@@ -123,7 +123,7 @@ class LanguageController extends Controller
      */
     public function show($id)
     {
-        $access = Auth::user()->can('read-general');
+        $access = Auth::user()->isAbleTo('read-general');
         if (!$access) {
             abort(403);
         }
@@ -153,7 +153,7 @@ class LanguageController extends Controller
      */
     public function edit($id)
     {
-        $access = Auth::user()->can('update-general');
+        $access = Auth::user()->isAbleTo('update-general');
         if (!$access) {
             abort(403);
         }
@@ -169,7 +169,7 @@ class LanguageController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        $access = Auth::user()->can('update-general');
+        $access = Auth::user()->isAbleTo('update-general');
         if (!$access) {
             abort(403);
         }
@@ -214,7 +214,7 @@ class LanguageController extends Controller
      */
     public function destroy(DeleteRequest $request, $id)
     {
-        $access = Auth::user()->can('delete-general');
+        $access = Auth::user()->isAbleTo('delete-general');
         if (!$access) {
             abort(403);
         }

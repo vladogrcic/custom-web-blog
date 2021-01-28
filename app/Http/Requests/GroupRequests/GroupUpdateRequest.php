@@ -17,7 +17,7 @@ class GroupUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('update-general') || Auth::user()->can('create-general');
+        $access = Auth::user()->isAbleTo('update-general') || Auth::user()->isAbleTo('create-general');
         return $access;
 
     }

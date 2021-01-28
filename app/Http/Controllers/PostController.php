@@ -35,7 +35,7 @@ class PostController extends Controller
     public function index(IndexRequest $request)
     {
         $ajax = $request->ajax();
-        $access = Auth::user()->can('read-posts');
+        $access = Auth::user()->isAbleTo('read-posts');
         if (!$access) {
             abort(403);
         }
@@ -113,7 +113,7 @@ class PostController extends Controller
     */
     public function create()
     {
-        $access = Auth::user()->can('create-posts');
+        $access = Auth::user()->isAbleTo('create-posts');
         if (!$access) {
             abort(403);
         }
@@ -274,7 +274,7 @@ class PostController extends Controller
     */
     public function store(UpdateRequest $request)
     {
-        $access = Auth::user()->can('create-posts');
+        $access = Auth::user()->isAbleTo('create-posts');
         if (!$access) {
             abort(403);
         }
@@ -341,12 +341,12 @@ class PostController extends Controller
     */
     public function show($id)
     {
-        $access = Auth::user()->can('read-posts');
+        $access = Auth::user()->isAbleTo('read-posts');
         if (!$access) {
             abort(403);
         }
         $id = (int)$id;
-        if (!(Auth::user()->can('all-posts'))) {
+        if (!(Auth::user()->isAbleTo('all-posts'))) {
             $post = Post::where('id', $id)->where('author_id', auth()->user()->id)->first();
         } else {
             $post = Post::where('id', $id)->first();
@@ -377,12 +377,12 @@ class PostController extends Controller
     */
     public function edit($id)
     {
-        $access = Auth::user()->can('update-posts');
+        $access = Auth::user()->isAbleTo('update-posts');
         if (!$access) {
             abort(403);
         }
         $id = (int)$id;
-        if (!(Auth::user()->can('all-posts'))) {
+        if (!(Auth::user()->isAbleTo('all-posts'))) {
             $post = Post::where('id', $id)->where('author_id', auth()->user()->id)->first();
         } else {
             $post = Post::where('id', $id)->first();
@@ -456,7 +456,7 @@ class PostController extends Controller
     */
     public function update(UpdateRequest $request, $id)
     {
-        $access = Auth::user()->can('update-posts');
+        $access = Auth::user()->isAbleTo('update-posts');
         if (!$access) {
             abort(403);
         }
@@ -467,7 +467,7 @@ class PostController extends Controller
         $locking->id = $id;
         $locking->action = 'editing';
         $locker = (new PostRepo)->locker($request)['locked_by'];
-        if (!(Auth::user()->can('all-posts'))) {
+        if (!(Auth::user()->isAbleTo('all-posts'))) {
             $post = Post::where('id', $id)->where('author_id', auth()->user()->id)->first();
         } else {
             $post = Post::where('id', $id)->first();
@@ -541,7 +541,7 @@ class PostController extends Controller
     */
     public function destroy(DeleteRequest $request, $id)
     {
-        $access = Auth::user()->can('delete-posts');
+        $access = Auth::user()->isAbleTo('delete-posts');
         if (!$access) {
             abort(403);
         }

@@ -96,12 +96,7 @@ if(Schema::hasTable('settings') && Schema::hasTable('languages')){
             // return redirect(App::getLocale().'/blog');
             return redirect($localCode.'/'.$blog_slug);
         });
-        // Route::get('/{slug}', function () {
-        //     $localCode = app()->getLocale();
-        //     if(!$localCode) $localCode = $lang[0]->slug;
-        //     // return redirect(App::getLocale().'/blog');
-        //     return redirect($localCode.'/'.$blog_slug);
-        // });
+        
         Route::prefix('{lang?}/'.$blog_slug)->group(function ($lang) use ($blog_slug) {
             // App::setLocale($lang);
             Route::get('/', ['uses' => 'FrontEndController@blog', 'blog_slug' => $blog_slug])

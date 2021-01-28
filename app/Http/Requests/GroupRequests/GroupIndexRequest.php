@@ -17,7 +17,7 @@ class GroupIndexRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('read-general');
+        $access = Auth::user()->isAbleTo('read-general');
         return $access;
     }
 

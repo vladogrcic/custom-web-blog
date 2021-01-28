@@ -1,7 +1,9 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+window.Vue = Vue;
+
 window.Slug = require('slug');
 window.CKEditor = require('@ckeditor/ckeditor5-vue');
 // window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');

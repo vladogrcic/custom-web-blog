@@ -17,7 +17,7 @@ class GroupDeleteRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('delete-general');
+        $access = Auth::user()->isAbleTo('delete-general');
         return $access;
     }
 

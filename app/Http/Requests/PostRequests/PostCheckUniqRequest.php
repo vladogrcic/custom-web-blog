@@ -18,7 +18,7 @@ class PostCheckUniqRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('update-posts') && Auth::user()->can('create-posts');
+        $access = Auth::user()->isAbleTo('update-posts') && Auth::user()->isAbleTo('create-posts');
         return $access;
     }
 

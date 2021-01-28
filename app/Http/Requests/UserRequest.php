@@ -17,7 +17,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('read-users') || Auth::user()->can('update-users');
+        $access = Auth::user()->isAbleTo('read-users') || Auth::user()->isAbleTo('update-users');
         return $access;
     }
 

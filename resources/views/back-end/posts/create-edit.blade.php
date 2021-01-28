@@ -466,6 +466,7 @@
                     _method: vm.method,
 
                     authorCustom: vm.authorCustom,
+                    id: vm.id,
                     author_id: vm.author_id,
                     title: vm.title,
                     slug: vm.slug,

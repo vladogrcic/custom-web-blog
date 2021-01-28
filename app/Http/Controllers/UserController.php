@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $access = Auth::user()->can('read-users');
+        $access = Auth::user()->isAbleTo('read-users');
         if (!$access) {
             abort(403);
         }
@@ -36,7 +36,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $access = Auth::user()->can('create-users');
+        $access = Auth::user()->isAbleTo('create-users');
         if (!$access) {
             abort(403);
         }
@@ -68,7 +68,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $access = Auth::user()->can('create-users');
+        $access = Auth::user()->isAbleTo('create-users');
         if (!$access) {
             abort(403);
         }
@@ -123,7 +123,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $access = Auth::user()->can('read-users');
+        $access = Auth::user()->isAbleTo('read-users');
         if (!$access) {
             abort(403);
         }
@@ -140,7 +140,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $access = Auth::user()->can('update-users');
+        $access = Auth::user()->isAbleTo('update-users');
         if (!$access) {
             abort(403);
         }
@@ -165,7 +165,7 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $access = Auth::user()->can('update-users');
+        $access = Auth::user()->isAbleTo('update-users');
         if (!$access) {
             abort(403);
         }
@@ -202,7 +202,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $access = Auth::user()->can('delete-users');
+        $access = Auth::user()->isAbleTo('delete-users');
         if (!$access) {
             abort(403);
         }

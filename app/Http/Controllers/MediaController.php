@@ -23,7 +23,7 @@ class MediaController extends Controller
     */
     public function index(GenRequest $request)
     {
-        $access = Auth::user()->can('read-media');
+        $access = Auth::user()->isAbleTo('read-media');
         if (!$access) {
             abort(403);
         }
@@ -63,7 +63,7 @@ class MediaController extends Controller
     */
     public function store(GenRequest $request)
     {
-        $access = Auth::user()->can('create-media');
+        $access = Auth::user()->isAbleTo('create-media');
         if (!$access) {
             abort(403);
         }
@@ -89,7 +89,7 @@ class MediaController extends Controller
     */
     public function edit($id)
     {
-        $access = Auth::user()->can('update-media');
+        $access = Auth::user()->isAbleTo('update-media');
         if (!$access) {
             abort(403);
         }
@@ -106,7 +106,7 @@ class MediaController extends Controller
     */
     public function update(GenRequest $request, $id)
     {
-        $access = Auth::user()->can('update-media');
+        $access = Auth::user()->isAbleTo('update-media');
         if (!$access) {
             abort(403);
         }
@@ -123,12 +123,12 @@ class MediaController extends Controller
     */
     public function destroy(DeleteRequest $request)
     {
-        $access = Auth::user()->can('delete-media');
+        $access = Auth::user()->isAbleTo('delete-media');
         if (!$access) {
             abort(403);
         }
         $request = (object)$request->validated();
-        $filterByUser = Auth::user()->can('delete-media');
+        $filterByUser = Auth::user()->isAbleTo('delete-media');
         if (!$filterByUser) {
             $output = Media::outputFolderList($request->url);
             return response()->json($output);

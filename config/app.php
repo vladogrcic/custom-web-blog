@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://192.168.1.5'),
 
     /*
     |--------------------------------------------------------------------------
@@ -195,7 +195,7 @@ return [
         App\Providers\SanitizerServiceProvider::class,
         App\Providers\ItemBuilderServiceProvider::class,
         App\Providers\SettingsContainerServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        // Intervention\Image\ImageServiceProvider::class
 
     ],
 

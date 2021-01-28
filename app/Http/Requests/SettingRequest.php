@@ -17,7 +17,7 @@ class SettingRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('read-settings') || Auth::user()->can('update-settings');
+        $access = Auth::user()->isAbleTo('read-settings') || Auth::user()->isAbleTo('update-settings');
         return $access;
     }
 

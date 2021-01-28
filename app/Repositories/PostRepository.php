@@ -74,7 +74,7 @@ class PostRepository
         }
         $post->excerpt = $request->excerpt;
         $post->content = $request->content;
-        $filterByUser = Auth::user()->can('publish-posts');
+        $filterByUser = Auth::user()->isAbleTo('publish-posts');
         if ($filterByUser) {
             if ($request->status == null) {
                 $post->status = false;

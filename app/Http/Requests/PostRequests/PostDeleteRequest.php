@@ -18,7 +18,7 @@ class PostDeleteRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('delete-posts');
+        $access = Auth::user()->isAbleTo('delete-posts');
         return $access;
     }
 

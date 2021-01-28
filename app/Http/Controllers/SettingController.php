@@ -45,7 +45,7 @@ class SettingController extends Controller
      */
     public function index(SettingRequest $request)
     {
-        $access = Auth::user()->can('read-settings');
+        $access = Auth::user()->isAbleTo('read-settings');
         if (!$access) {
             abort(403);
         }
@@ -123,7 +123,7 @@ class SettingController extends Controller
      */
     public function update(SettingRequest $request)
     {
-        $access = Auth::user()->can('update-settings');
+        $access = Auth::user()->isAbleTo('update-settings');
         if (!$access) {
             abort(403);
         }
@@ -157,7 +157,7 @@ class SettingController extends Controller
     
     public function file(FaviconRequest $request)
     {
-        $access = Auth::user()->can('update-settings');
+        $access = Auth::user()->isAbleTo('update-settings');
         if (!$access) {
             abort(403);
         }

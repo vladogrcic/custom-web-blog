@@ -18,7 +18,7 @@ class PostIndexRequest extends FormRequest
      */
     public function authorize()
     {
-        $access = Auth::user()->can('read-posts');
+        $access = Auth::user()->isAbleTo('read-posts');
         // $access = true;
         return $access;
     }
