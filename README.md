@@ -39,9 +39,7 @@ Custom Laravel blog built with Laravel, Vue and Bulma.
 
 9. ``php artisan db:seed``
 
-10. ``php artisan storage:link``
-
-11. ``php artisan serve``
+10. ``php artisan serve``
 
 ##### You can now access your project at localhost:8000
 
