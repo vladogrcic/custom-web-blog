@@ -4,6 +4,11 @@ Custom Laravel blog built with Laravel, Vue and Bulma.
 ## Screenshots
 
 ![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-media-2019-05-02-18_24_23_result.jpg)
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-media-2019-05-02-18_24_50_result.jpg)
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-settings-2019-05-02-18_32_16_result.jpg)
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-settings-2019-05-02-18_32_04_result.jpg)
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-posts-create-2019-05-02-18_21_50_result.jpg)
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-posts-2019-05-02-18_21_29_result.jpg)
 
 ## Installation instructions:
 
