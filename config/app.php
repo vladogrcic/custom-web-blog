@@ -195,7 +195,7 @@ return [
         App\Providers\SanitizerServiceProvider::class,
         App\Providers\ItemBuilderServiceProvider::class,
         App\Providers\SettingsContainerServiceProvider::class,
-        // Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 

@@ -18,11 +18,12 @@ class GeneralHelper
     }
     /**
      * Get a random string of letters.
-     * 
+     *
      * @param  number $len Number of letters needed.
      * @return string Final string of letters.
      */
-    public static function getRandomWord($len = 10) {
+    public static function getRandomWord($len = 10)
+    {
         $word = array_merge(range('a', 'z'), range('A', 'Z'));
         shuffle($word);
         return substr(implode($word), 0, $len);
@@ -33,7 +34,8 @@ class GeneralHelper
      * @param  array $dat Array to convert.
      * @return array Exports the converted array.
      */
-    public static function convert_from_latin1_to_utf8_recursively($dat){
+    public static function convert_from_latin1_to_utf8_recursively($dat)
+    {
         if (is_string($dat)) {
             return utf8_encode($dat);
         } elseif (is_array($dat)) {
