@@ -1,6 +1,10 @@
 # Custom Web Blog
 Custom Laravel blog built with Laravel, Vue and Bulma.
 
+## Screenshots
+
+![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-media-2019-05-02-18_24_23_result.jpg)
+
 ## Installation instructions:
 
 1. Create a database. 
