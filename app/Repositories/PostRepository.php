@@ -115,7 +115,7 @@ class PostRepository
                     }
                 }
             }
-            if(count($newTags))
+            if(is_array($newTags))
                 $post->tags()->sync($newTags);
         }
         // if (property_exists($request, 'language_id')) {
