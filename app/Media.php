@@ -12,7 +12,7 @@ use Session;
 use File;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Helpers\General\GeneralHelper as General;
-use \Waavi\Sanitizer\Sanitizer;
+use \Elegant\Sanitizer\Sanitizer;
 
 class Media
 {

@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Waavi\Sanitizer\Laravel\SanitizesInput;
-use Waavi\Sanitizer\Contracts\Filter;
-use Waavi\Sanitizer\Sanitizer;
+use Elegant\Sanitizer\Laravel\SanitizesInput;
+use Elegant\Sanitizer\Contracts\Filter;
+use Elegant\Sanitizer\Sanitizer;
 
 class FaviconRequest extends FormRequest
 {

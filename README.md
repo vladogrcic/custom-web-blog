@@ -1,22 +1,11 @@
 # Custom Web Blog
 Custom Laravel blog built with Laravel, Vue and Bulma.
 
-## Screenshots
-
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-media-2019-05-02-18_24_23_result.jpg)
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-media-2019-05-02-18_24_50_result.jpg)
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-settings-2019-05-02-18_32_16_result.jpg)
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-settings-2019-05-02-18_32_04_result.jpg)
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-posts-create-2019-05-02-18_21_50_result.jpg)
-![Screenshot](.app-presentation-assets/jpg/screencapture-35-233-255-190-custom-web-blog-manage-posts-2019-05-02-18_21_29_result.jpg)
-
 ## Installation instructions:
 
 1. Create a database. 
 
 2. Pull Laravel/php project from GitHub.
-
-     ``git clone https://github.com/vladogrcic/custom-web-blog.git``
 
 3. Open the console and cd your project root directory
 
@@ -50,7 +39,9 @@ Custom Laravel blog built with Laravel, Vue and Bulma.
 
 9. ``php artisan db:seed``
 
-10. ``php artisan serve``
+10. ``php artisan storage:link``
+
+11. ``php artisan serve``
 
 ##### You can now access your project at localhost:8000
 

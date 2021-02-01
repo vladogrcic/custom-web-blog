@@ -3,7 +3,7 @@
 namespace App\Http\Requests\MediaRequests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Waavi\Sanitizer\Laravel\SanitizesInput;
+use Elegant\Sanitizer\Laravel\SanitizesInput;
 use Auth;
 
 class MediaGenRequest extends FormRequest

@@ -1,6 +1,6 @@
 <?php namespace App\Providers;
 
-use Waavi\Sanitizer\Laravel\Factory as Sanitizer;
+use Elegant\Sanitizer\Laravel\Factory as Sanitizer;
 use Illuminate\Support\ServiceProvider;
 use App\Filters\Strip as Strip;
 use App\Filters\Array2 as Array2;

@@ -1,7 +1,7 @@
 <?php namespace App\Filters;
 
 use Illuminate\Support\Str;
-use Waavi\Sanitizer\Contracts\Filter;
+use Elegant\Sanitizer\Contracts\Filter;
 
 class Strip implements Filter
 {
